@@ -1,9 +1,11 @@
 .app {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: "CVForm CVPreview";
+    justify-content: space-evenly;
     gap:24px;
     margin: auto;
-    max-width: 1300px;
+    max-width: 1500px;
     padding: 24px;
     width: 100%;
-    background-color: #f5f5f5;
 }
