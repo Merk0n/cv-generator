@@ -3,7 +3,7 @@
     grid-template-columns: repeat(2, auto);
     grid-template-areas: "CVForm CVPreview";
     justify-content: space-evenly;
-    gap:24px;
+    gap:8px;
     margin: auto;
     max-width: 1500px;
     padding: 24px;

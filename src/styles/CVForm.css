@@ -1,7 +1,7 @@
 .cv-form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 12cm;
     gap: 24px;
 }
 
