@@ -1,11 +1,14 @@
-import './styles/App.css'
+import "./App.css"
+import CVForm from './components/CVForm.jsx'
+import CVPreview from './components/CVPreview.jsx'
 
 function App() {
 
   return (
-    <>
-      <h1>Hello!</h1>
-    </>
+    <div className="app">
+    <CVForm/>
+    <CVPreview/>
+    </div>
   )
 }
 
