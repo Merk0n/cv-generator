@@ -7,7 +7,7 @@
     background-color: #fff;
 }
 
-input {
+input, textarea {
     border: none;
     outline: none;
     border-radius: 15px;
@@ -16,8 +16,13 @@ input {
     box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
     transition: 300ms ease-in-out;
   }
+
+textarea {
+    resize: none;
+    height: 150px;
+}
   
-input:focus {
+input:focus, textarea:focus {
     background-color: white;
     transform: scale(1.05);
     box-shadow: 5px 5px 5px #969696,

@@ -1,20 +1,22 @@
 import "../styles/FormMaker.css";
 
 export default function FormMaker({
+  basicInput,
   labelText,
   inputType,
   placeholder,
   name,
   required,
   id,
-  formTitle
+  formTitle,
 }) {
+  const InputComponent = basicInput ? 'textarea' : 'input';
   return (
       <div className='form-maker'>
         <div className='form-title'>{formTitle}</div>
 
         <label htmlFor={id}>{labelText}</label>
-        <input
+        <InputComponent
           type={inputType}
           placeholder={placeholder}
           name={name}

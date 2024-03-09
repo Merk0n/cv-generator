@@ -1,5 +1,6 @@
 .header {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     gap: 24px;
     justify-content: center;
     align-items: center;
@@ -63,4 +64,28 @@
 
 .switch input[type="checkbox"]:checked:active+.slider::after {
     transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+}
+
+a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.create-by {
+    display: flex;
+    gap:4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ghIcon {
+    width: 32px;
+    height: 32px;
 }

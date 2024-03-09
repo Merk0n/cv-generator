@@ -34,6 +34,7 @@ export default function CVForm() {
           id='professional-title'
         />
         <FormMaker
+          basicInput='textarea'
           labelText='Summary'
           inputType='text'
           placeholder='A summary of your professional experience'
