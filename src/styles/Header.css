@@ -4,11 +4,17 @@
     gap: 24px;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+}
+
+.header-box {
+    padding: 24px 24px 0;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .switch {
@@ -67,27 +73,47 @@
     transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
 }
 
-a {
-    display: grid;
-    grid-column: 1 / -1;
-    align-items: center;
-    gap: 4px;
-    text-decoration: none;
-    color: #000;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 .create-by {
     display: flex;
     gap:4px;
-    justify-content: center;
     align-items: center;
+    padding-bottom: 12px;
 }
 
 .ghIcon {
     width: 32px;
     height: 32px;
 }
+
+.header-btn {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column: -1 / 1;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+}
+
+button {
+    background-color: white;
+    color: black;
+    border-radius: 10em;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+  }
+  
+button:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+  };
+  
+button:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+  };
