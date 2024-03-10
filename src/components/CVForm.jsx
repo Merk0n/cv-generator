@@ -1,56 +1,18 @@
 import FormMaker from "./FormMaker.jsx";
 import Header from "./Header.jsx";
 import "../styles/CVForm.css";
+import { FORM_DATA } from "./formData.js";
 
 export default function CVForm() {
   return (
     <div className='cv-form'>
       <Header />
-
       <div className='form-label'>
-        <FormMaker
-          formTitle='Personal Information'
-          labelText='First Name'
-          inputType='text'
-          placeholder='John'
-          name='first-name'
-          required='required'
-          id='first-name'
-        />
-        <FormMaker
-          labelText='Last Name'
-          inputType='text'
-          placeholder='Doe'
-          name='last-name'
-          required='required'
-          id='last-name'
-        />
-        <FormMaker
-          labelText='Professional title'
-          inputType='text'
-          placeholder='Software Developer'
-          name='professional-title'
-          required='required'
-          id='professional-title'
-        />
-        <FormMaker
-          basicInput='textarea'
-          labelText='Summary'
-          inputType='text'
-          placeholder='A summary of your professional experience'
-          name='summary'
-          required='required'
-          id='summary'
-        />
-        <FormMaker
-          formTitle='Education'
-          labelText='Education'
-          inputType='text'
-          placeholder='education'
-          name='education'
-          required='required'
-          id='education'
-        />
+        <FormMaker {...FORM_DATA[0]} />
+        <FormMaker {...FORM_DATA[1]} />
+        <FormMaker {...FORM_DATA[2]} />
+        <FormMaker {...FORM_DATA[3]} />
+        <FormMaker {...FORM_DATA[4]} />
       </div>
     </div>
   );

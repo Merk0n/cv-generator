@@ -1,0 +1,51 @@
+export const FORM_DATA = [
+  {
+    formTitle: "Personal Information",
+    labelText: "First Name",
+    basicInput: false,
+    inputType: "text",
+    placeholder: "John",
+    name: "first-name",
+    required: "required",
+    id: "first-name",
+  },
+  {
+    labelText: "Last Name",
+    basicInput: false,
+    inputType: "text",
+    placeholder: "Doe",
+    name: "last-name",
+    required: "required",
+    id: "last-name",
+  },
+  {
+    labelText: "Professional title",
+    basicInput: false,
+    inputType: "text",
+    placeholder: "Software Developer",
+    name: "professional-title",
+    required: "required",
+    id: "professional-title",
+  },
+  {
+    labelText: "Summary",
+    basicInput: true,
+    inputType: "text",
+    placeholder: "A summary of your professional experience",
+    name: "summary",
+    required: "required",
+    id: "summary",
+  },
+  {
+    formTitle: "Education",
+    labelText: "Education",
+    basicInput: false,
+    inputType: "text",
+    placeholder: "education",
+    name: "education",
+    required: "required",
+    id: "education",
+  },
+
+
+];
