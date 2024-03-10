@@ -15,7 +15,7 @@ export default function FormMaker({
       <div className='form-maker'>
         <div className='form-title'>{formTitle}</div>
 
-        <label htmlFor={id}>{labelText}</label>
+        <label className="label" htmlFor={id}>{labelText}</label>
         <InputComponent
           type={inputType}
           placeholder={placeholder}

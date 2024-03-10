@@ -42,6 +42,15 @@ export default function CVForm() {
           required='required'
           id='summary'
         />
+        <FormMaker
+          formTitle='Education'
+          labelText='Education'
+          inputType='text'
+          placeholder='education'
+          name='education'
+          required='required'
+          id='education'
+        />
       </div>
     </div>
   );

@@ -6,6 +6,12 @@
     align-items: center;
 }
 
+.header h1 {
+    background: -webkit-linear-gradient(rgb(41, 137, 216), rgb(221, 71, 71));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .header-box {
     padding: 24px 24px 0;
     background-color: #fff;

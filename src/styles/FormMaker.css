@@ -13,7 +13,7 @@ input, textarea {
     border-radius: 15px;
     padding: 1em;
     background-color: #f3f4f6;
-    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.3);
     transition: 300ms ease-in-out;
   }
 
@@ -33,4 +33,8 @@ input:focus, textarea:focus {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 12px;
+}
+
+.label {
+    padding-bottom: 5px;
 }
