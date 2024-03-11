@@ -4,7 +4,7 @@ import { useState } from 'react';
 import SideButton from './SideButton.jsx';
 import CustomizeForm from './CustomizeForm.jsx';
 import ContentForm from './ContentForm.jsx';
-import SideTab from './SideTab.jsx';
+import Tabs from './Tabs.jsx';
 
 export default function CVForm() {
   const [selectedSetting, setSelectedSetting] = useState('content');
@@ -15,8 +15,9 @@ export default function CVForm() {
 
   return (
     <div className='cv-form'>
-      <SideTab
+      <Tabs
         className='sidebar'
+        ButtonsContainer='nav'
         buttons={
           <>
             <SideButton
@@ -33,7 +34,7 @@ export default function CVForm() {
             </SideButton>
           </>
         }
-      ></SideTab>
+      ></Tabs>
 
       <div className='container-form'>
         <Header />
