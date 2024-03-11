@@ -1,10 +1,10 @@
 import FormMaker from './FormMaker';
 import { FORM_DATA } from './formData';
 
-export default function SettingsForm({ formType }) {
+export default function ContentForm() {
   return (
     <div className='form-label'>
-      {FORM_DATA[formType].map((contentItem) => (
+      {FORM_DATA.content.map((contentItem) => (
         <FormMaker key={contentItem.formTitle} {...contentItem} />
       ))}
     </div>
