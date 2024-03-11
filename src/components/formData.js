@@ -1,4 +1,5 @@
-export const FORM_DATA = [
+export const FORM_DATA = {
+  content:[
   {
     formTitle: "Personal Information",
     labelText: "First Name",
@@ -46,7 +47,8 @@ export const FORM_DATA = [
     required: "required",
     id: "education",
   },
-
+  ],
+  customize: [
   {
     formTitle: "Customize",
     labelText: "Font Size",
@@ -93,5 +95,5 @@ export const FORM_DATA = [
     required: "required",
     id: "border-radius",
   },
-
-];
+  ],
+};
