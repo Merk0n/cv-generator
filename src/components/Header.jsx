@@ -1,7 +1,9 @@
 import "../styles/Header.css";
 import ghIcon from "../assets/github-icon.svg";
+import SideButton from "./SideButton";
 
 export default function Header() {
+
   return (
     <>
       <div className='header-box'>
@@ -14,10 +16,8 @@ export default function Header() {
           </label>
 
           <div className='header-btn'>
-            <button style={{ color: "#e03131", backgroundColor: "#ffe3e3" }}>
-              Clear
-            </button>
-            <button>Load example</button>
+            <SideButton textColor={"#ff0000"}>Clear</SideButton>
+            <SideButton>Load example</SideButton>
           </div>
         </div>
         <div className='create-by'>
