@@ -46,6 +46,4 @@ export const FORM_DATA = [
     required: "required",
     id: "education",
   },
-
-
 ];

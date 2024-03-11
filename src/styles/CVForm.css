@@ -1,34 +1,35 @@
 .cv-form {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
 }
 
 .container-form {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 12cm;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 12cm;
 }
 
 .form-label {
-    display: flex;
-    flex-direction: column;;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 5px;
-    background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #fff;
 }
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
+
 .sidebar button {
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 30px 15px;
-    border-radius: 15px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 30px 15px;
+  border-radius: 15px;
 }

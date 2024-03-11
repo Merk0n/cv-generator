@@ -14,15 +14,17 @@ export default function Header() {
           </label>
 
           <div className='header-btn'>
-            <button style={{color:"#e03131", backgroundColor:"#ffe3e3"}}>Clear</button>
+            <button style={{ color: "#e03131", backgroundColor: "#ffe3e3" }}>
+              Clear
+            </button>
             <button>Load example</button>
           </div>
-          </div>
-          <div className='create-by'>
-            Created by Merk0n
-            <a href='https://github.com/Merk0n/cv-generator'>
-              <img className='ghIcon' src={ghIcon} alt='github' />
-            </a>
+        </div>
+        <div className='create-by'>
+          Created by Merk0n
+          <a href='https://github.com/Merk0n/cv-generator'>
+            <img className='ghIcon' src={ghIcon} alt='github' />
+          </a>
         </div>
       </div>
     </>

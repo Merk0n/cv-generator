@@ -10,20 +10,21 @@ export default function FormMaker({
   required,
   id,
 }) {
-  const InputComponent = basicInput ? 'textarea' : 'input';
+  const InputComponent = basicInput ? "textarea" : "input";
   return (
-      <div className='form-maker'>
-        <div className='form-title'>{formTitle}</div>
+    <div className='form-maker'>
+      <div className='form-title'>{formTitle}</div>
 
-        <label className="label" htmlFor={id}>{labelText}</label>
-        <InputComponent
-          type={inputType}
-          placeholder={placeholder}
-          name={name}
-          required={required}
-          id={id}
-        />
-      </div>
-
+      <label className='label' htmlFor={id}>
+        {labelText}
+      </label>
+      <InputComponent
+        type={inputType}
+        placeholder={placeholder}
+        name={name}
+        required={required}
+        id={id}
+      />
+    </div>
   );
 }

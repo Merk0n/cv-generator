@@ -1,5 +1,3 @@
-export default function SideButton({ children}) {
-    return (
-        <button>{children}</button>
-    );
-    }
+export default function SideButton({ children }) {
+  return <button>{children}</button>;
+}
