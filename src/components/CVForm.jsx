@@ -36,10 +36,8 @@ export default function CVForm() {
         }
       ></Tabs>
 
-      <div className='container-form'>
-        <Header />
-        {selectedSetting === 'content' ? <ContentForm /> : <CustomizeForm />}
-      </div>
+      <Header />
+      {selectedSetting === 'content' ? <ContentForm /> : <CustomizeForm />}
     </div>
   );
 }

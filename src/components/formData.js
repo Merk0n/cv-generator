@@ -77,23 +77,5 @@ export const FORM_DATA = {
       required: 'required',
       id: 'background-color',
     },
-    {
-      labelText: 'Border Color',
-      basicInput: false,
-      inputType: 'color',
-      placeholder: 'Border Color',
-      name: 'border-color',
-      required: 'required',
-      id: 'border-color',
-    },
-    {
-      labelText: 'Border Radius',
-      basicInput: false,
-      inputType: 'range',
-      placeholder: 'Border Radius',
-      name: 'border-radius',
-      required: 'required',
-      id: 'border-radius',
-    },
   ],
 };

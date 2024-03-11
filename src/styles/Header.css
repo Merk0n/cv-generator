@@ -1,12 +1,17 @@
-.header {
+.header-box {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 24px;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  padding: 24px 24px 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-wrap: nowrap;
+  height: 200px;
   align-items: center;
+  gap: 24px;
 }
 
-.header h1 {
+.header-box h1 {
   background: -webkit-linear-gradient(rgb(41, 137, 216), rgb(221, 71, 71));
   -webkit-background-clip: text;
   background-clip: text;
@@ -14,15 +19,32 @@
   font-size: 2.5em;
 }
 
-.header-box {
-  padding: 24px 24px 0;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  text-wrap: nowrap;
+.create-by {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  gap: 4px;
+  align-items: center;
+}
+
+.gIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.header-btn {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column: -1 / 1;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+label.switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+  margin-left: auto;
 }
 
 .switch {
@@ -49,7 +71,7 @@
 }
 
 .slider::after {
-  content: "";
+  content: '';
   display: inline-block;
   width: var(--toggle-diameter);
   height: var(--toggle-diameter);
@@ -63,11 +85,11 @@
   transition: 0.3s all ease-in-out;
 }
 
-.switch input[type="checkbox"]:checked + .slider {
+.switch input[type='checkbox']:checked + .slider {
   background-color: var(--color-green);
 }
 
-.switch input[type="checkbox"]:checked + .slider::after {
+.switch input[type='checkbox']:checked + .slider::after {
   transform: translateX(
     calc(
       var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)
@@ -77,41 +99,20 @@
     calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
 }
 
-.switch input[type="checkbox"] {
+.switch input[type='checkbox'] {
   display: none;
 }
 
-.switch input[type="checkbox"]:active + .slider::after {
+.switch input[type='checkbox']:active + .slider::after {
   width: var(--toggle-wider);
 }
 
-.switch input[type="checkbox"]:checked:active + .slider::after {
+.switch input[type='checkbox']:checked:active + .slider::after {
   transform: translateX(
     calc(
       var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)
     )
   );
-}
-
-.create-by {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  padding-bottom: 12px;
-}
-
-.ghIcon {
-  width: 32px;
-  height: 32px;
-}
-
-.header-btn {
-  display: grid;
-  grid-auto-flow: column;
-  grid-column: -1 / 1;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
 }
 
 button {

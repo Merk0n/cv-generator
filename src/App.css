@@ -1,9 +1,8 @@
 .app {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-areas: "CVForm CVPreview";
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
-  gap: 8px;
+  gap: 32px;
   margin: auto;
   max-width: 1500px;
   padding: 24px;
