@@ -1,8 +1,7 @@
 import Header from './Header.jsx';
 import '../styles/CVForm.css';
 import { useState } from 'react';
-import ContentForm from './ContentForm.jsx';
-import CustomizeForm from './CustomizeForm.jsx';
+import SettingsForm from './SettingsForm.jsx';
 import Sidebar from './Sidebar.jsx';
 
 export default function CVForm() {
@@ -23,7 +22,11 @@ export default function CVForm() {
 
       <div className='container-form'>
         <Header />
-        {selectedSetting === 'content' ? <ContentForm /> : <CustomizeForm />}
+        {selectedSetting === 'content' ? (
+          <SettingsForm formType={'content'} />
+        ) : (
+          <SettingsForm formType={'customize'} />
+        )}
       </div>
     </div>
   );
