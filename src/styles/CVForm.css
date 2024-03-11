@@ -33,3 +33,8 @@
   padding: 30px 15px;
   border-radius: 15px;
 }
+
+button.active {
+  background: rgb(131, 58, 180);
+  background: -webkit-linear-gradient(rgb(41, 137, 216 ,0.5), rgb(221, 71, 71, 0.5));
+}
