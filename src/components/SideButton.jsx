@@ -1,15 +1,6 @@
-export default function SideButton({
-  children,
-  textColor = '#000',
-  onSelect,
-  isSelected,
-}) {
+export default function SideButton({ children, onSelect, isSelected }) {
   return (
-    <button
-      className={isSelected ? 'active' : undefined}
-      style={{ color: textColor }}
-      onClick={onSelect}
-    >
+    <button className={isSelected ? 'active' : undefined} onClick={onSelect}>
       {children}
     </button>
   );

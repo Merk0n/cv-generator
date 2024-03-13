@@ -1,17 +1,12 @@
 import '../styles/Header.css';
 import SwitchButton from './SwitchButton';
-import SideButton from './SideButton';
-import { useState } from 'react';
+import HeaderButton from './HeaderButton';
 import CreateBy from './CreateBy';
 
 export default function Header() {
-  const [personalInfo, setPersonalInfo] = useState('xd');
-
-  function handleSelect(selectedButton) {
-    //selectedButton => "Clear" , "Load example"
-    setPersonalInfo(selectedButton);
-    console.log(selectedButton);
-  }
+  const loadClick = (e) => {
+    e.target.textContent = 'Clearing...';
+  };
 
   return (
     <>
@@ -21,18 +16,14 @@ export default function Header() {
         <SwitchButton />
 
         <div className='header-btn'>
-          <SideButton
-            textColor={'#ff0000'}
-            onSelect={() => handleSelect('clear')}
-          >
+          <HeaderButton textColor={'#ff0000'} onSelect={(e) => loadClick(e)}>
             Clear
-          </SideButton>
-          <SideButton onSelect={() => handleSelect('load')}>
+          </HeaderButton>
+          <HeaderButton onSelect={(e) => loadClick(e)}>
             Load example
-          </SideButton>
+          </HeaderButton>
         </div>
         <CreateBy />
-        {personalInfo}
       </div>
     </>
   );
