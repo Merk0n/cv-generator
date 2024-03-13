@@ -1,4 +1,4 @@
-import "../styles/CVPreview.css";
+import '../styles/CVPreview.css';
 
 export default function CVPreview() {
   return (

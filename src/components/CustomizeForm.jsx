@@ -5,7 +5,7 @@ export default function CustomizeForm() {
   return (
     <div className='form-label'>
       {FORM_DATA.customize.map((customizeItem) => (
-        <FormMaker key={customizeItem.formTitle} {...customizeItem} />
+        <FormMaker key={customizeItem.labelText} {...customizeItem} />
       ))}
     </div>
   );
