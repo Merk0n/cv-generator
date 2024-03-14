@@ -1,8 +1,8 @@
 export default function Input({
+  index,
   property,
   label,
   type,
-  index,
   state,
   setState,
 }) {

@@ -1,79 +1,54 @@
 export const FORM_DATA = {
-  content: [
+  emptyAll: [
     {
-      formTitle: 'Personal Information',
-      property: 'name',
-      labelText: 'First Name',
-      textareaInput: false,
-      inputType: 'text',
-      placeholder: 'John',
-      name: 'first-name',
-      required: 'required',
-      id: 'first-name',
-    },
-    {
-      labelText: 'Last Name',
-      textareaInput: false,
-      inputType: 'text',
-      placeholder: 'Doe',
-      name: 'last-name',
-      required: 'required',
-      id: 'last-name',
-    },
-    {
-      labelText: 'Professional title',
-      textareaInput: false,
-      inputType: 'text',
-      placeholder: 'Software Developer',
-      name: 'professional-title',
-      required: 'required',
-      id: 'professional-title',
-    },
-    {
-      labelText: 'Summary',
-      textareaInput: true,
-      inputType: 'text',
-      placeholder: 'A summary of your professional experience',
-      name: 'summary',
-      required: 'required',
-      id: 'summary',
-    },
-    {
-      formTitle: 'Education',
-      labelText: 'Education',
-      basicInput: true,
-      inputType: 'text',
-      placeholder: 'education',
-      name: 'education',
-      required: 'required',
-      id: 'education',
+      name: '',
+      email: '',
+      phoneNumber: '',
+      address: '',
+      bio: '',
     },
   ],
-  customize: [
+
+  personal: [
     {
-      formTitle: 'Customize',
-      labelText: 'Font Size',
-      inputType: 'range',
-      placeholder: 'Font Size',
-      name: 'font-size',
-      required: 'required',
-      id: 'font-size',
+      name: 'John Doe',
+      email: 's@s.com',
+      phoneNumber: '123-456-7890',
+      address: '1234 Elm St, Springfield, IL 62701',
+      bio: 'I am a software developer with a passion for web development.',
+    },
+  ],
+
+  education: [
+    {
+      school: 'University of Illinois',
+      degree: 'Bachelor of Science in Computer Science',
+      graduationDate: 'May 2020',
+    },
+  ],
+
+  experience: [
+    {
+      company: 'ABC Company',
+      position: 'Software Developer',
+      startDate: 'June 2020',
+      endDate: 'Present',
+      description: 'I develop software for the company.',
+    },
+  ],
+
+  skills: [
+    {
+      skill: 'JavaScript',
+      level: 'Intermediate',
     },
     {
-      labelText: 'Font Color',
-      inputType: 'color',
-      placeholder: 'Font Color',
-      name: 'font-color',
-      required: 'required',
-      id: 'font-color',
+      skill: 'React',
+      level: 'Intermediate',
     },
     {
-      labelText: 'Background Color',
-      inputType: 'color',
-      placeholder: 'Background Color',
-      name: 'background-color',
-      required: 'required',
-      id: 'background-color',
+      skill: 'Node.js',
+      level: 'Intermediate',
     },
   ],
 };

@@ -5,37 +5,18 @@ import Card from './components/Card.jsx';
 import Personal from './components/Personal.jsx';
 import SwitchButton from './components/SwitchButton.jsx';
 import CreateBy from './components/CreateBy.jsx';
+import { FORM_DATA } from './components/formData.js';
 
 function App() {
-  const [clear, setClear] = useState([
-    {
-      name: '',
-      email: '',
-      phoneNumber: '',
-      address: '',
-      bio: '',
-    },
-  ]);
+  const [clear, setClear] = useState(FORM_DATA.emptyAll);
 
-  const [loadExample, setLoadExample] = useState([
-    {
-      name: 'John Doe',
-      email: 's',
-      phoneNumber: '123-456-7890',
-      address: '1234 Elm St, Springfield, IL 62701',
-      bio: 'I am a software developer with a passion for web development.',
-    },
-  ]);
+  const [loadExample, setLoadExample] = useState(FORM_DATA.personal);
 
-  const [personal, setPersonal] = useState([
-    {
-      name: '',
-      email: '',
-      phoneNumber: '',
-      address: '',
-      bio: '',
-    },
-  ]);
+  const [personal, setPersonal] = useState(FORM_DATA.emptyAll);
+
+  const [experience, setExperience] = useState(FORM_DATA.emptyAll);
+
+  const [education, setEducation] = useState(FORM_DATA.emptyAll);
 
   const [selectedSetting, setSelectedSetting] = useState('content');
 
@@ -85,8 +66,12 @@ function App() {
             <Personal state={personal} setState={setPersonal} />
           </Card>
 
-          <Card title='Personal Info'>
-            <Personal state={personal} setState={setPersonal} />
+          <Card title='Experience'>
+            <Personal state={experience} setState={setExperience} />
+          </Card>
+
+          <Card title='Education'>
+            <Personal state={education} setState={setEducation} />
           </Card>
         </div>
       </div>
