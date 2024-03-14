@@ -7,6 +7,21 @@ export const FORM_DATA = {
       address: '',
       bio: '',
     },
+
+    {
+      job: '',
+      employer: '',
+      startDate: '',
+      endDate: '',
+      description: '',
+    },
+
+    {
+      school: '',
+      degree: '',
+      startDate: '',
+      endDate: '',
+    },
   ],
 
   personal: [
