@@ -2,6 +2,7 @@ export const FORM_DATA = {
   content: [
     {
       formTitle: 'Personal Information',
+      property: 'name',
       labelText: 'First Name',
       textareaInput: false,
       inputType: 'text',
