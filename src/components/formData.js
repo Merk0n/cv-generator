@@ -3,7 +3,7 @@ export const FORM_DATA = {
     {
       formTitle: 'Personal Information',
       labelText: 'First Name',
-      basicInput: false,
+      textareaInput: false,
       inputType: 'text',
       placeholder: 'John',
       name: 'first-name',
@@ -12,7 +12,7 @@ export const FORM_DATA = {
     },
     {
       labelText: 'Last Name',
-      basicInput: false,
+      textareaInput: false,
       inputType: 'text',
       placeholder: 'Doe',
       name: 'last-name',
@@ -21,7 +21,7 @@ export const FORM_DATA = {
     },
     {
       labelText: 'Professional title',
-      basicInput: false,
+      textareaInput: false,
       inputType: 'text',
       placeholder: 'Software Developer',
       name: 'professional-title',
@@ -30,7 +30,7 @@ export const FORM_DATA = {
     },
     {
       labelText: 'Summary',
-      basicInput: true,
+      textareaInput: true,
       inputType: 'text',
       placeholder: 'A summary of your professional experience',
       name: 'summary',
@@ -40,7 +40,7 @@ export const FORM_DATA = {
     {
       formTitle: 'Education',
       labelText: 'Education',
-      basicInput: false,
+      basicInput: true,
       inputType: 'text',
       placeholder: 'education',
       name: 'education',
@@ -52,7 +52,6 @@ export const FORM_DATA = {
     {
       formTitle: 'Customize',
       labelText: 'Font Size',
-      basicInput: false,
       inputType: 'range',
       placeholder: 'Font Size',
       name: 'font-size',
@@ -61,7 +60,6 @@ export const FORM_DATA = {
     },
     {
       labelText: 'Font Color',
-      basicInput: false,
       inputType: 'color',
       placeholder: 'Font Color',
       name: 'font-color',
@@ -70,7 +68,6 @@ export const FORM_DATA = {
     },
     {
       labelText: 'Background Color',
-      basicInput: false,
       inputType: 'color',
       placeholder: 'Background Color',
       name: 'background-color',

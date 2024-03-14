@@ -1,13 +1,9 @@
 import '../styles/Header.css';
 import SwitchButton from './SwitchButton';
-import HeaderButton from './HeaderButton';
 import CreateBy from './CreateBy';
+import CustomButton from './CustomButton';
 
 export default function Header() {
-  const loadClick = (e) => {
-    e.target.textContent = 'Clearing...';
-  };
-
   return (
     <>
       <div className='header-box'>
@@ -16,12 +12,8 @@ export default function Header() {
         <SwitchButton />
 
         <div className='header-btn'>
-          <HeaderButton textColor={'#ff0000'} onSelect={(e) => loadClick(e)}>
-            Clear
-          </HeaderButton>
-          <HeaderButton onSelect={(e) => loadClick(e)}>
-            Load example
-          </HeaderButton>
+          <CustomButton>Clear</CustomButton>
+          <CustomButton>Load example</CustomButton>
         </div>
         <CreateBy />
       </div>

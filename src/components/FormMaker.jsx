@@ -1,8 +1,6 @@
-import '../styles/FormMaker.css';
-
 export default function FormMaker({
   formTitle,
-  basicInput,
+  textareaInput,
   labelText,
   inputType,
   placeholder,
@@ -10,10 +8,10 @@ export default function FormMaker({
   required,
   id,
 }) {
-  const InputComponent = basicInput ? 'textarea' : 'input';
+  const InputComponent = textareaInput ? 'textarea' : 'input';
   return (
     <div className='form-maker'>
-      <div className='form-title'>{formTitle}</div>
+      {formTitle && <div className='form-title'>{formTitle}</div>}
 
       <label className='label' htmlFor={id}>
         {labelText}
