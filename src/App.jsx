@@ -8,6 +8,7 @@ import CreateBy from './components/CreateBy.jsx';
 import { FORM_DATA } from './components/formData.js';
 import Education from './components/Education.jsx';
 import Experience from './components/Experience.jsx';
+import Preview from './components/Preview.jsx';
 
 function App() {
   const [clear, setClear] = useState(FORM_DATA.emptyAll);
@@ -90,19 +91,20 @@ function App() {
           <Card title='Personal Info'>
             <Personal state={personal} setState={setPersonal} />
           </Card>
-          <hr />
           <Card title='Experience'>
             <Experience state={experience} setState={setExperience} />
           </Card>
-          <hr />
           <Card title='Education'>
             <Education state={education} setState={setEducation} />
           </Card>
-          <hr />
         </div>
       </div>
       <div className='cv-right'>
-        <h1>Preview</h1>
+        <Preview
+          personal={personal}
+          experience={experience}
+          education={education}
+        />
       </div>
     </div>
   );

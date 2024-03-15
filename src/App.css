@@ -42,18 +42,17 @@
   gap: 24px;
   width: 12cm;
   grid-column: 2 / 3;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 5px;
-  background-color: #fff;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 10px 25px;
+  padding: 25px 25px;
   background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 12cm;
+  border-radius: 10px;
 }
 
 .input-item {
@@ -63,47 +62,26 @@
 
 .card-title {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 12px;
+
 }
 
 .card-button {
   display: flex;
   align-items: center;
+  background-color: #fff;
   gap: 5px;
-  border-radius: 20px;
   padding: 5px 10px;
-  background-color: #f3f4f6;
   cursor: pointer;
-  margin-left: 30px;
   font-weight: 500;
+  border: 0;
 }
 
-.delete-button {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background-color: hsla(0, 100%, 50%, 0.205);
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: 500;
-  margin: 15px 0 15px auto;
-}
 
-.add-button {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background-color: hsla(120, 100%, 25%, 0.205);
-  cursor: pointer;
-  padding: 15px 50px;
-  border-radius: 20px;
-  font-weight: 500;
-  margin: 15px auto;
-}
 
 .label {
   font-size: 18px;
@@ -253,7 +231,7 @@ label.switch {
   transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
 }
 
-button {
+.custom-button {
   background-color: white;
   color: black;
   border-radius: 10em;
@@ -266,12 +244,36 @@ button {
   box-shadow: 0 0 0 0 black;
 }
 
-button:hover {
+.custom-button:hover {
   transform: translateY(-4px) translateX(-2px);
   box-shadow: 2px 5px 0 0 black;
 }
 
-button:active {
+.custom-button:active {
   transform: translateY(2px) translateX(1px);
   box-shadow: 0 0 0 0 black;
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: hsla(0, 100%, 50%, 0.205);
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin: 15px 0 15px auto;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: hsla(120, 100%, 25%, 0.205);
+  cursor: pointer;
+  padding: 15px 50px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin: 15px auto;
 }

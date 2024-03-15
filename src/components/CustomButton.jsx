@@ -1,6 +1,9 @@
 export default function CustomButton({ children, onSelect, isSelected }) {
   return (
-    <button className={isSelected ? 'active' : undefined} onClick={onSelect}>
+    <button
+      className={`custom-button ${isSelected && 'active'}`}
+      onClick={onSelect}
+    >
       {children}
     </button>
   );

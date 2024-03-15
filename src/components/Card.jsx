@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import arrowIcon from '../assets/arrow-down-circle.svg';
+import chevronDown from '../assets/chevron-down.png';
+import chevronUp from '../assets/chevron-up.png';
 
 export default function Card({ title, children }) {
   const [showState, setShowState] = useState(true);
@@ -9,13 +10,12 @@ export default function Card({ title, children }) {
 
   return (
     <div className='card'>
-      <h3 className='card-title'>
-        {title}
-        <button className='card-button' onClick={handleToggleShow}>
-          <img src={arrowIcon} alt='arrow-down-circle' />
-          Show/Hide
-        </button>
-      </h3>
+      <button className='card-button' onClick={handleToggleShow}>
+        <h3 className='card-title'>
+          {title}
+          <img src={showState ? chevronDown : chevronUp} alt='chevron' />
+        </h3>
+      </button>
 
       {showState && children}
     </div>

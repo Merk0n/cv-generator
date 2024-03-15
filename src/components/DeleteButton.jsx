@@ -10,7 +10,7 @@ export default function DeleteButton({ index, state, setState }) {
   return (
     <>
       <button
-        className='delete-button'
+        className='custom-button delete-button'
         onClick={() => {
           handleDelete(index);
         }}
