@@ -42,9 +42,11 @@ export default function Education({ state, setState }) {
             />
 
             <DeleteButton index={index} state={state} setState={setState} />
+            <hr />
           </div>
         );
       })}
+
       <AddButton
         onSelect={() => {
           const newState = [...state];

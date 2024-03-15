@@ -11,16 +11,25 @@ export default function Experience({ state, setState }) {
           <div key={index} className='input-item'>
             <Input
               index={index}
-              property='job'
-              label='Job'
+              property='companyName'
+              label='Company Name'
               type='text'
               state={state}
               setState={setState}
             />
             <Input
               index={index}
-              property='employer'
-              label='Employer'
+              property='positionTitle'
+              label='Position Title'
+              placeholder='Enter position title'
+              type='text'
+              state={state}
+              setState={setState}
+            />
+            <Input
+              index={index}
+              property='location'
+              label='Location'
               type='text'
               state={state}
               setState={setState}
@@ -51,6 +60,7 @@ export default function Experience({ state, setState }) {
               setState={setState}
             />
             <DeleteButton index={index} state={state} setState={setState} />
+            <hr />
           </div>
         );
       })}

@@ -42,6 +42,7 @@ export default function Personal({ state, setState }) {
         state={state}
         setState={setState}
       />
+      <hr />
     </>
   );
 }
