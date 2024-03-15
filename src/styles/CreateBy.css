@@ -1,0 +1,10 @@
+.create-by {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.gIcon {
+    width: 32px;
+    height: 32px;
+}

@@ -1,0 +1,11 @@
+.cv-preview {
+    display: flex;
+    flex-direction: column;
+    width: 21cm;
+    height: 29.7cm;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}

@@ -1,4 +1,5 @@
-export default function Preview({ personal, experience, education }) {
+import '../styles/CVPreview.css';
+export default function CVPreview({ personal, experience, education }) {
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-UK', {

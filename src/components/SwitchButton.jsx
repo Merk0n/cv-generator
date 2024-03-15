@@ -1,4 +1,5 @@
 import themeIcon from '../assets/theme-light-dark.svg';
+import '../styles/SwitchButton.css';
 
 export default function SwitchButton() {
   return (

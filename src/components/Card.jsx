@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import chevronDown from '../assets/chevron-down.png';
 import chevronUp from '../assets/chevron-up.png';
+import '../styles/Card.css';
 
 export default function Card({ title, children }) {
-  const [showState, setShowState] = useState(true);
+  const [showState, setShowState] = useState(false);
   const handleToggleShow = () => {
     setShowState(!showState);
   };

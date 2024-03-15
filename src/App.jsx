@@ -8,7 +8,7 @@ import CreateBy from './components/CreateBy.jsx';
 import { FORM_DATA } from './components/formData.js';
 import Education from './components/Education.jsx';
 import Experience from './components/Experience.jsx';
-import Preview from './components/Preview.jsx';
+import CVPreview from './components/CVPreview.jsx';
 
 function App() {
   const [clear, setClear] = useState(FORM_DATA.emptyAll);
@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className='app'>
-      <div className='cv-left'>
+      <div className='cv-form'>
         <div className='sidebar'>
           <CustomButton
             isSelected={selectedSetting === 'content'}
@@ -80,7 +80,7 @@ function App() {
 
           <SwitchButton />
 
-          <div className='header-btn'>
+          <div className='header-buttons'>
             <CustomButton onSelect={clearForm}>Clear</CustomButton>
             <CustomButton onSelect={loadForm}>Load example</CustomButton>
           </div>
@@ -99,8 +99,8 @@ function App() {
           </Card>
         </div>
       </div>
-      <div className='cv-right'>
-        <Preview
+      <div className='cv-preview'>
+        <CVPreview
           personal={personal}
           experience={experience}
           education={education}

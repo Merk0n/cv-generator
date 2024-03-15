@@ -1,0 +1,11 @@
+.add-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: hsla(120, 100%, 25%, 0.205);
+    cursor: pointer;
+    padding: 15px 50px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin: 15px auto;
+}

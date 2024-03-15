@@ -1,3 +1,5 @@
+import '../styles/AddButton.css';
+
 export default function AddButton({ onSelect }) {
   return (
     <>

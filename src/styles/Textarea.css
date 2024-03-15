@@ -1,0 +1,21 @@
+textarea {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: #f3f4f6;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease-in-out;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+
+textarea:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px #969696, -13px -13px 100px #ffffff;
+}

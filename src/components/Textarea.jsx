@@ -1,3 +1,5 @@
+import '../styles/Textarea.css';
+
 export default function Textarea({ property, label, index, state, setState }) {
   return (
     <div className='input-item'>

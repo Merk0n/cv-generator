@@ -1,0 +1,43 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 12cm;
+    border-radius: 10px;
+}
+
+.input-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+.card-button {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    gap: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: 500;
+    border: 0;
+}
+
+
+
+.label {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 16px;
+}
