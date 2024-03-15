@@ -10,21 +10,24 @@ export default function CVPreview({ personal, experience, education }) {
   };
 
   return (
-    <div id='preview'>
-      <div id='personal-preview'>
-        <h1>{personal[0].name}</h1>
-        <p>{personal[0].email}</p>
-        <p>{personal[0].phoneNumber}</p>
-        <p>{personal[0].address}</p>
-
-        <em>
-          {'"'}
-          {personal[0].bio}
-          {'"'}
-        </em>
+    <>
+      <div className='personal-preview'>
+        <div className='personal-top'>
+          <h1>{personal[0].name}</h1>
+          <em>
+            {'"'}
+            {personal[0].bio}
+            {'"'}
+          </em>
+        </div>
+        <div className='personal-info'>
+          <p>{personal[0].email}</p>
+          <p>{personal[0].phoneNumber}</p>
+          <p>{personal[0].address}</p>
+        </div>
       </div>
 
-      <div id='experience-preview'>
+      <div className='experience-preview'>
         <h2 className='section-title'>Experience</h2>
         {experience.map((item, index) => {
           return (
@@ -47,7 +50,7 @@ export default function CVPreview({ personal, experience, education }) {
           );
         })}
       </div>
-      <div id='education-preview'>
+      <div className='education-preview'>
         <h2 className='section-title'>Education</h2>
         {education.map((item, index) => {
           return (
@@ -61,6 +64,6 @@ export default function CVPreview({ personal, experience, education }) {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }
