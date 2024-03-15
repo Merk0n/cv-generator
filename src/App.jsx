@@ -5,58 +5,26 @@ import Card from './components/Card.jsx';
 import Personal from './components/Personal.jsx';
 import SwitchButton from './components/SwitchButton.jsx';
 import CreateBy from './components/CreateBy.jsx';
-import { FORM_DATA } from './components/formData.js';
 import Education from './components/Education.jsx';
 import Experience from './components/Experience.jsx';
 import CVPreview from './components/CVPreview.jsx';
+import TemplateLoader from './components/TemplateLoader.jsx';
+import exampleData from './components/exampleData.js';
 
 function App() {
-  const [clear, setClear] = useState(FORM_DATA.emptyAll);
+  const [personalInfo, setPersonalInfo] = useState([exampleData.personalInfo]);
 
-  const [loadExample, setLoadExample] = useState(FORM_DATA.personal);
-
-  const [personal, setPersonal] = useState([
-    {
-      name: 'John Doe',
-      email: 'xd@xd.com',
-      phoneNumber: '123-456-7890',
-      address: '1234 Elm St, Springfield, IL 62701',
-      bio: 'I am a software developer with a passion for web development.',
-    },
+  const [experienceInfo, setExperienceInfo] = useState([
+    exampleData.experience,
   ]);
 
-  const [experience, setExperience] = useState([
-    {
-      job: 'Software Developer',
-      employer: 'ABC Company',
-      startDate: '2020-06-01',
-      endDate: '2024-06-01',
-      description: 'I develop software for the company.',
-    },
-  ]);
-
-  const [education, setEducation] = useState([
-    {
-      school: 'Moon Space Lab',
-      degree: 'BSc Science',
-      startDate: '2020-09-01',
-      endDate: '2024-06-01',
-    },
-  ]);
+  const [educationInfo, setEducationInfo] = useState([exampleData.education]);
 
   const [selectedSetting, setSelectedSetting] = useState('content');
 
   function handleSelect(selectedButton) {
     setSelectedSetting(selectedButton);
   }
-
-  const clearForm = () => {
-    setPersonal(clear);
-  };
-
-  const loadForm = () => {
-    setPersonal(loadExample);
-  };
 
   return (
     <div className='app'>
@@ -80,30 +48,62 @@ function App() {
 
           <SwitchButton />
 
-          <div className='header-buttons'>
-            <CustomButton onSelect={clearForm}>Clear</CustomButton>
-            <CustomButton onSelect={loadForm}>Load example</CustomButton>
-          </div>
+          <TemplateLoader
+            onClear={() => {
+              setPersonalInfo([
+                {
+                  name: '',
+                  email: '',
+                  phoneNumber: '',
+                  address: '',
+                  bio: '',
+                },
+              ]);
+              setEducationInfo([
+                {
+                  school: '',
+                  degree: '',
+                  startDate: '',
+                  endDate: '',
+                },
+              ]);
+              setExperienceInfo([
+                {
+                  job: '',
+                  employer: '',
+                  startDate: '',
+                  endDate: '',
+                  description: '',
+                },
+              ]);
+            }}
+            onTemplateLoad={() => {
+              setPersonalInfo([exampleData.personalInfo]);
+              setExperienceInfo([exampleData.experience]);
+              setEducationInfo([exampleData.education]);
+            }}
+          />
+
           <CreateBy />
         </div>
 
         <div className='main-form'>
           <Card title='Personal Info'>
-            <Personal state={personal} setState={setPersonal} />
+            <Personal state={personalInfo} setState={setPersonalInfo} />
           </Card>
           <Card title='Experience'>
-            <Experience state={experience} setState={setExperience} />
+            <Experience state={experienceInfo} setState={setExperienceInfo} />
           </Card>
           <Card title='Education'>
-            <Education state={education} setState={setEducation} />
+            <Education state={educationInfo} setState={setEducationInfo} />
           </Card>
         </div>
       </div>
       <div className='cv-preview'>
         <CVPreview
-          personal={personal}
-          experience={experience}
-          education={education}
+          personal={personalInfo}
+          experience={experienceInfo}
+          education={educationInfo}
         />
       </div>
     </div>
