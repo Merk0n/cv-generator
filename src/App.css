@@ -1,17 +1,21 @@
 .app {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-areas: "cvForm cvPreview";
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-evenly;
   gap: 32px;
   margin: auto;
   padding: 24px;
 }
 
 .cv-form {
+  grid-area: cvForm;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: 200px auto;
   gap: 24px;
   margin-bottom: 1rem;
+  justify-self: center;
 }
 
 .sidebar {
