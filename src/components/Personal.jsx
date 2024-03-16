@@ -42,7 +42,7 @@ export default function Personal({ state, setState }) {
         state={state}
         setState={setState}
       />
-      <hr />
+      <hr className='dark-hr' />
     </>
   );
 }

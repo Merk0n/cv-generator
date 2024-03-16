@@ -8,7 +8,7 @@ export default function Experience({ state, setState }) {
     <>
       {state.map((job, index) => {
         return (
-          <div key={index} className='input-item'>
+          <>
             <Input
               index={index}
               property='companyName'
@@ -60,8 +60,8 @@ export default function Experience({ state, setState }) {
               setState={setState}
             />
             <DeleteButton index={index} state={state} setState={setState} />
-            <hr />
-          </div>
+            <hr className='dark-hr' />
+          </>
         );
       })}
       <AddButton

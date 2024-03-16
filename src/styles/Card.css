@@ -1,17 +1,18 @@
 .card {
     display: flex;
     flex-direction: column;
-    padding: 25px 25px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 12cm;
     border-radius: 10px;
+    padding: 5px;
 }
 
 .input-item {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    padding: 0 25px 0px 25px;
 }
 
 .card-title {
@@ -32,6 +33,7 @@
     cursor: pointer;
     font-weight: 500;
     border: 0;
+    padding: 25px;
 }
 
 

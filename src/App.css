@@ -79,3 +79,50 @@
   align-items: center;
   gap: 8px;
 }
+
+.dark-theme {
+  background-color: #343a40;
+
+  .header-box {
+    background-color: #495057;
+  }
+
+  .header-box h1 {
+    background: -webkit-linear-gradient(rgb(41, 137, 216, 0.5), rgb(221, 71, 71, 0.5));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .custom-button,
+  .input-item input,
+  .input-item textarea {
+    background-color: #868e96;
+  }
+
+  .custom-button.active {
+    background: rgb(131, 58, 180);
+    background: -webkit-linear-gradient(rgb(41, 137, 216, 0.5),
+        rgb(221, 71, 71, 0.5));
+  }
+
+  .switch input[type='checkbox']:checked+.slider {
+    background-color: #868e96
+  }
+
+  .card,
+  .card-button {
+    background-color: #495057;
+  }
+
+  .dark-hr {
+    border: #343a40 1px solid;
+  }
+
+  input:focus,
+  textarea:focus {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px #343a40, -13px -13px 100px #495057;
+  }
+
+}

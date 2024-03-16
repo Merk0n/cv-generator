@@ -27,8 +27,14 @@ function App() {
     setSelectedSetting(chosenSetting);
   }
 
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  function handleThemeChange() {
+    setIsDarkMode(!isDarkMode);
+  }
+
   return (
-    <div className='app'>
+    <div className={`app ${isDarkMode && 'dark-theme'}`}>
       <div className='cv-form'>
         <div className='sidebar'>
           <CustomButton
@@ -47,7 +53,7 @@ function App() {
         <div className='header-box'>
           <h1>cv generator</h1>
 
-          <SwitchButton />
+          <SwitchButton onSelect={handleThemeChange} isSelected={isDarkMode} />
 
           <TemplateLoader
             onClear={() => {

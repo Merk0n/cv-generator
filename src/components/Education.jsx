@@ -7,7 +7,7 @@ export default function Education({ state, setState }) {
     <>
       {state.map((item, index) => {
         return (
-          <div key={index} className='input-item'>
+          <>
             <Input
               index={index}
               property='school'
@@ -42,8 +42,8 @@ export default function Education({ state, setState }) {
             />
 
             <DeleteButton index={index} state={state} setState={setState} />
-            <hr />
-          </div>
+            <hr className='dark-hr' />
+          </>
         );
       })}
 
