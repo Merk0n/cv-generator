@@ -1,14 +1,12 @@
 .cv-preview {
     display: flex;
     flex-direction: column;
-    width: 21cm;
-    height: 29.7cm;
+    width: 600px;
+    height: 862.5px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    padding: 15px 75px 0 85px;
-    position: sticky;
+    padding: 15px;
 }
 
 .personal-preview {
