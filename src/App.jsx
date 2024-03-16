@@ -10,6 +10,7 @@ import Experience from './components/Experience.jsx';
 import CVPreview from './components/CVPreview.jsx';
 import TemplateLoader from './components/TemplateLoader.jsx';
 import exampleData from './components/exampleData.js';
+import Customize from './components/Customize.jsx';
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState([exampleData.personalInfo]);
@@ -22,8 +23,8 @@ function App() {
 
   const [selectedSetting, setSelectedSetting] = useState('content');
 
-  function handleSelect(selectedButton) {
-    setSelectedSetting(selectedButton);
+  function handleSelect(chosenSetting) {
+    setSelectedSetting(chosenSetting);
   }
 
   return (
@@ -88,15 +89,26 @@ function App() {
         </div>
 
         <div className='main-form'>
-          <Card title='Personal Info'>
-            <Personal state={personalInfo} setState={setPersonalInfo} />
-          </Card>
-          <Card title='Experience'>
-            <Experience state={experienceInfo} setState={setExperienceInfo} />
-          </Card>
-          <Card title='Education'>
-            <Education state={educationInfo} setState={setEducationInfo} />
-          </Card>
+          {selectedSetting === 'content' ? (
+            <>
+              <Card title='Personal Info'>
+                <Personal state={personalInfo} setState={setPersonalInfo} />
+              </Card>
+              <Card title='Experience'>
+                <Experience
+                  state={experienceInfo}
+                  setState={setExperienceInfo}
+                />
+              </Card>
+              <Card title='Education'>
+                <Education state={educationInfo} setState={setEducationInfo} />
+              </Card>
+            </>
+          ) : (
+            <Card title='Customize'>
+              <Customize />
+            </Card>
+          )}
         </div>
       </div>
       <div className='cv-preview'>

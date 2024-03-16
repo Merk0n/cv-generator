@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import chevronDown from '../assets/chevron-down.png';
-import chevronUp from '../assets/chevron-up.png';
+import chevronDownIcon from '../assets/chevron-down.png';
+import chevronUpIcon from '../assets/chevron-up.png';
 import '../styles/Card.css';
 
 export default function Card({ title, children }) {
@@ -14,7 +14,10 @@ export default function Card({ title, children }) {
       <button className='card-button' onClick={handleToggleShow}>
         <h3 className='card-title'>
           {title}
-          <img src={showState ? chevronDown : chevronUp} alt='chevron' />
+          <img
+            src={showState ? chevronDownIcon : chevronUpIcon}
+            alt='chevron'
+          />
         </h3>
       </button>
 
