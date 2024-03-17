@@ -10,6 +10,7 @@
 .cv-form {
   position: relative;
   overflow-y: auto;
+  scrollbar-gutter: stable;
   max-height: 92vh;
   grid-area: cvForm;
   display: grid;
@@ -20,7 +21,17 @@
 }
 
 .cv-form::-webkit-scrollbar {
+  width: 0.25em;
   background: transparent;
+}
+
+.cv-form::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.cv-form::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
 }
 
 .sidebar {
@@ -127,6 +138,11 @@
   textarea:focus {
     transform: scale(1.05);
     box-shadow: 5px 5px 5px #343a40, -13px -13px 100px #495057;
+  }
+
+  .cv-form::-webkit-scrollbar-thumb {
+    background-color: #868e96;
+    border-radius: 10px;
   }
 
 }
