@@ -4,15 +4,15 @@
     flex-direction: column;
     background-color: var(--color-background-preview);
     height: auto;
-    width: 700px;
+    width: 900px;
     align-items: center;
+    padding: 1cm 0;
 }
 
 .cv-print {
-    width: 600px;
-    height: 862.5px;
-    padding: 15px;
-    margin: 24px 0;
+    width: 21cm;
+    height: 29.7cm;
+    padding: 1cm;
     background-color: white;
     color: black;
 }

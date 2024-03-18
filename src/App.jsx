@@ -11,6 +11,8 @@ import CVPreview from './components/CVPreview.jsx';
 import TemplateLoader from './components/TemplateLoader.jsx';
 import exampleData from './components/exampleData.js';
 import Customize from './components/Customize.jsx';
+import { useRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState([exampleData.personalInfo]);
@@ -32,6 +34,15 @@ function App() {
   function handleThemeChange() {
     setIsDarkMode(!isDarkMode);
   }
+
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: 'CV',
+    pageStyle: `
+      @page { size: A4; }
+    `,
+  });
 
   return (
     <div className={`app ${isDarkMode && 'dark-theme'}`}>
@@ -89,6 +100,7 @@ function App() {
               setExperienceInfo([exampleData.experience]);
               setEducationInfo([exampleData.education]);
             }}
+            onSave={handlePrint}
           />
 
           <CreateBy />
@@ -118,7 +130,7 @@ function App() {
         </div>
       </div>
       <div className='cv-preview'>
-        <div className='cv-print'>
+        <div className='cv-print' ref={componentRef}>
           <CVPreview
             personal={personalInfo}
             experience={experienceInfo}

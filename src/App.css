@@ -5,7 +5,7 @@
   grid-template-columns: repeat(2, auto);
   justify-content: space-evenly;
   margin: auto;
-  height: 100vh;
+  height: 129vh;
 }
 
 .cv-form {
