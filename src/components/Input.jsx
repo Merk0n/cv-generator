@@ -1,5 +1,3 @@
-import '../styles/Input.css';
-
 export default function Input({
   index,
   property,
@@ -9,11 +7,12 @@ export default function Input({
   setState,
 }) {
   return (
-    <div className='input-item'>
-      <label className='label' htmlFor={property}>
+    <label className='input-item'>
+      <span className='input-item__title' htmlFor={property}>
         {label}
-      </label>
+      </span>
       <input
+        className='input-item__input'
         id={property}
         type={type}
         value={state[index][property]}
@@ -26,6 +25,6 @@ export default function Input({
           setState(newValue);
         }}
       />
-    </div>
+    </label>
   );
 }

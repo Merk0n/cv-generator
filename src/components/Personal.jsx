@@ -22,8 +22,8 @@ export default function Personal({ state, setState }) {
       />
       <Input
         index={0}
-        property='phoneNumber'
-        label='Phone Number'
+        property='phone'
+        label='Phone'
         type='tel'
         state={state}
         setState={setState}

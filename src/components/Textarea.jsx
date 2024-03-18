@@ -1,12 +1,11 @@
-import '../styles/Textarea.css';
-
 export default function Textarea({ property, label, index, state, setState }) {
   return (
-    <div className='input-item'>
-      <label className='label' htmlFor={property}>
+    <label className='input-item'>
+      <span className='input-item__title' htmlFor={property}>
         {label}
-      </label>
+      </span>
       <textarea
+        className='input-item__textarea'
         id={property}
         value={state[index][property]}
         onChange={(e) => {
@@ -18,6 +17,6 @@ export default function Textarea({ property, label, index, state, setState }) {
           setState(newValue);
         }}
       />
-    </div>
+    </label>
   );
 }

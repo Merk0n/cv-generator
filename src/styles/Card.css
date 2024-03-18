@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     width: 12cm;
-    border: 1px solid var(--color-text-opacity30);
 
     button {
         color: inherit;
@@ -14,15 +13,40 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    padding: 0 25px 0px 25px;
+    padding: 0 25px;
+    margin-right: 5px;
     background-color: inherit;
     color: inherit;
+    border: 2px solid var(--color-text-opacity30);
+    border-radius: 5px;
 
     input,
     textarea {
+        border: none;
         color: inherit;
         background-color: inherit;
     }
+
+    .input-item__input,
+    .input-item__textarea {
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+        resize: none;
+        outline: none;
+    }
+
+    .input-item__textarea {
+        height: 100px;
+    }
+}
+
+.input-item__title {
+    transform: translateY(-50%);
+    background-color: var(--color-background);
+    width: fit-content;
+    padding-inline: 5px;
 }
 
 .card-title {
@@ -32,6 +56,7 @@
     align-items: center;
     font-size: 24px;
     font-weight: 600;
+    border-bottom: 2px solid var(--color-text-opacity30);
 }
 
 .card-button {
@@ -44,10 +69,4 @@
     padding: 25px;
 
 
-}
-
-.label {
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 16px;
 }
