@@ -1,11 +1,13 @@
 .card {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 12cm;
-    border-radius: 10px;
-    padding: 5px;
+    border: 1px solid var(--color-text-opacity30);
+
+    button {
+        color: inherit;
+        background-color: inherit;
+    }
 }
 
 .input-item {
@@ -13,6 +15,14 @@
     flex-direction: column;
     margin-bottom: 10px;
     padding: 0 25px 0px 25px;
+    background-color: inherit;
+    color: inherit;
+
+    input,
+    textarea {
+        color: inherit;
+        background-color: inherit;
+    }
 }
 
 .card-title {
@@ -22,21 +32,19 @@
     align-items: center;
     font-size: 24px;
     font-weight: 600;
-
 }
 
 .card-button {
     display: flex;
     align-items: center;
-    background-color: #fff;
     gap: 5px;
     cursor: pointer;
     font-weight: 500;
     border: 0;
     padding: 25px;
+
+
 }
-
-
 
 .label {
     font-size: 18px;

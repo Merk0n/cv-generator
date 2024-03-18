@@ -118,11 +118,13 @@ function App() {
         </div>
       </div>
       <div className='cv-preview'>
-        <CVPreview
-          personal={personalInfo}
-          experience={experienceInfo}
-          education={educationInfo}
-        />
+        <div className='cv-print'>
+          <CVPreview
+            personal={personalInfo}
+            experience={experienceInfo}
+            education={educationInfo}
+          />
+        </div>
       </div>
     </div>
   );

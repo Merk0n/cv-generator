@@ -1,21 +1,11 @@
 .custom-button {
-    background-color: white;
-    color: black;
     border-radius: 10em;
     font-size: 17px;
     font-weight: 600;
     padding: 0.5em 1em;
     cursor: pointer;
-    border: 1px solid black;
-    box-shadow: 0 0 0 0 black;
-}
-
-.custom-button:hover {
-    transform: translateY(-4px) translateX(-2px);
-    box-shadow: 2px 5px 0 0 black;
-}
-
-.custom-button:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 black;
+    border: 1px solid var(--color);
+    box-shadow: 0 0 0 0 var(--color-btn-hover);
+    color: inherit;
+    background-color: inherit;
 }

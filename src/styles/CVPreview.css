@@ -1,12 +1,20 @@
 .cv-preview {
+    position: relative;
     display: flex;
     flex-direction: column;
+    background-color: var(--color-background-preview);
+    height: auto;
+    width: 700px;
+    align-items: center;
+}
+
+.cv-print {
     width: 600px;
     height: 862.5px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
+    margin: 24px 0;
+    background-color: white;
+    color: black;
 }
 
 .personal-preview {

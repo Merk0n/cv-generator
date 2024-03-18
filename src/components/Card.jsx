@@ -15,6 +15,7 @@ export default function Card({ title, children }) {
         <h3 className='card-title'>
           {title}
           <img
+            className='custom-icon'
             src={showState ? chevronDownIcon : chevronUpIcon}
             alt='chevron'
           />

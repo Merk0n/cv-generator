@@ -6,7 +6,7 @@ export default function CreateBy() {
     <div className='create-by'>
       Created by Merk0n
       <a href='https://github.com/Merk0n/cv-generator'>
-        <img className='gIcon' src={ghIcon} alt='github' />
+        <img className='custom-icon' src={ghIcon} alt='github' />
       </a>
     </div>
   );
