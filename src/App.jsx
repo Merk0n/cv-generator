@@ -40,7 +40,13 @@ function App() {
     content: () => componentRef.current,
     documentTitle: 'CV',
     pageStyle: `
-      @page { size: A4; }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      body {
+        margin: 0;
+      }
     `,
   });
 
