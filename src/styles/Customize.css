@@ -1,0 +1,74 @@
+.customize {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+}
+
+.customize-option {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.layout-options,
+.font-options {
+    display: flex;
+
+    button {
+        margin: 0 0.5rem;
+        background-color: initial;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.custom-setting {
+    border: 1px solid var(--color);
+    border-radius: 5px;
+    padding: 24px;
+
+}
+
+.custom-font {
+    display: flex;
+    border: 1px solid var(--color);
+    border-radius: 5px;
+    padding: 20px 15px;
+}
+
+.top-layout {
+    background: linear-gradient(180deg, #0e374e 50%, #fff 50%);
+}
+
+.left-layout {
+    background: linear-gradient(90deg, #0e374e 50%, #fff 50%);
+}
+
+input[type="color"] {
+    appearance: none;
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+}
+
+.rounded-input::-webkit-color-swatch {
+    border-radius: 50%;
+}
+
+.color-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.roboto-font {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.font-options {
+    font-family: 'Arial', sans-serif;
+}
