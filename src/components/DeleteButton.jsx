@@ -1,5 +1,4 @@
 import trashIcon from '../assets/trash.svg';
-import '../styles/DeleteButton.css';
 
 export default function DeleteButton({ index, state, setState }) {
   const handleDelete = (index) => {
@@ -16,7 +15,12 @@ export default function DeleteButton({ index, state, setState }) {
           handleDelete(index);
         }}
       >
-        <img src={trashIcon} alt='trash-icon' />
+        <img
+          className='custom-icon'
+          style={{ height: '25px', width: '25px' }}
+          src={trashIcon}
+          alt='trash-icon'
+        />
         DELETE
       </button>
     </>

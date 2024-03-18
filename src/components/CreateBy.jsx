@@ -1,5 +1,4 @@
 import ghIcon from '../assets/github-icon.svg';
-import '../styles/CreateBy.css';
 
 export default function CreateBy() {
   return (

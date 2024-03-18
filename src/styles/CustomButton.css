@@ -5,7 +5,30 @@
     padding: 0.5em 1em;
     cursor: pointer;
     border: 1px solid var(--color);
-    box-shadow: 0 0 0 0 var(--color-btn-hover);
     color: inherit;
     background-color: inherit;
+}
+
+.delete-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: hsla(0, 100%, 50%, 0.205);
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin: 15px 5px 15px auto;
+}
+
+.add-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: hsla(120, 100%, 25%, 0.205);
+    cursor: pointer;
+    padding: 15px 50px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin: 15px auto;
 }

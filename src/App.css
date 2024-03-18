@@ -91,6 +91,23 @@
   gap: 8px;
 }
 
+.dark-hr {
+  border: 1px solid var(--color-text-opacity30);
+  margin: 0;
+  margin: 24px;
+}
+
+.create-by {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.custom-icon {
+  width: 32px;
+  height: 32px;
+}
+
 .dark-theme {
   background-color: var(--color-background);
   color: var(--color);
