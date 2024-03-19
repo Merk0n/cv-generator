@@ -22,7 +22,7 @@ export default function Personal({ state, setState }) {
       />
       <Input
         index={0}
-        property='phone'
+        property='phoneNumber'
         label='Phone'
         type='tel'
         state={state}

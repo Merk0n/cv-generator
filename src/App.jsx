@@ -87,21 +87,22 @@ function App() {
                   bio: '',
                 },
               ]);
+              setExperienceInfo([
+                {
+                  companyName: '',
+                  positionTitle: '',
+                  location: '',
+                  startDate: '',
+                  endDate: '',
+                  description: '',
+                },
+              ]);
               setEducationInfo([
                 {
                   school: '',
                   degree: '',
                   startDate: '',
                   endDate: '',
-                },
-              ]);
-              setExperienceInfo([
-                {
-                  job: '',
-                  employer: '',
-                  startDate: '',
-                  endDate: '',
-                  description: '',
                 },
               ]);
               setTechStackInfo([
