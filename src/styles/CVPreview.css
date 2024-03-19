@@ -69,3 +69,7 @@
         flex-direction: column;
     }
 }
+
+.techstack-preview:not(.techstack-preview:has(.tech-stack)) {
+    display: none;
+}
