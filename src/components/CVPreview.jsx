@@ -7,6 +7,7 @@ export default function CVPreview({
   techStack,
   bgcolor,
   textcolor,
+  font,
 }) {
   const formatDate = (date) => {
     const newDate = new Date(date);
@@ -22,8 +23,12 @@ export default function CVPreview({
     color: textcolor,
   };
 
+  const fontStyle = {
+    fontFamily: font,
+  };
+
   return (
-    <div className={layout}>
+    <div style={fontStyle} className={layout}>
       <div style={styles} className='personal-preview'>
         <div className='personal-top'>
           <h1>{personal[0].name}</h1>

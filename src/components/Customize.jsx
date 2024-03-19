@@ -7,6 +7,8 @@ export default function Customize({
   onBGChangeColor,
   isTextColor,
   onTextChangeColor,
+  isFont,
+  onFontChange,
 }) {
   return (
     <div className='customize'>
@@ -15,10 +17,7 @@ export default function Customize({
         <hr className='dark-hr' />
         <h2>Layout</h2>
         <div className='layout-options'>
-          <button
-            className={isLayout === 'top' && 'active-layout'}
-            onClick={() => onChangeLayout('top')}
-          >
+          <button onClick={() => onChangeLayout('top')}>
             <div
               style={{
                 background: `linear-gradient(180deg, ${isBGColor} 50%, #fff 50%)`,
@@ -27,7 +26,7 @@ export default function Customize({
                 isLayout === 'top' && 'active-layout'
               } custom-setting top-layout`}
             ></div>
-            TOP
+            <span className='button-title'>TOP</span>
           </button>
           <button onClick={() => onChangeLayout('left')}>
             <div
@@ -39,7 +38,7 @@ export default function Customize({
                 isLayout === 'left' && 'active-layout'
               } custom-setting left-layout`}
             ></div>
-            LEFT
+            <span className='button-title'>LEFT</span>
           </button>
         </div>
       </div>
@@ -83,13 +82,42 @@ export default function Customize({
       <div className='customize-option'>
         <h2>Font</h2>
         <div className='font-options'>
-          <button className='roboto-font'>
-            <span className='custom-font'>Aa</span>
-            Roboto
+          <button
+            className='custom-font poppins-font'
+            onClick={() => onFontChange('Poppins')}
+          >
+            <div
+              className={`${
+                isFont === 'Poppins' && 'active-layout'
+              } border-icon`}
+            >
+              <span className='button-title'>Aa</span>
+              <span className='button-title'>Poppins</span>
+            </div>
           </button>
-          <button className='arial-font'>
-            <span className='custom-font'>Aa</span>
-            Arial
+          <button
+            className='custom-font roboto-font'
+            onClick={() => onFontChange('Roboto')}
+          >
+            <div
+              className={`${
+                isFont === 'Roboto' && 'active-layout'
+              } border-icon`}
+            >
+              <span className='button-title '>Aa</span>
+              <span className='button-title'>Roboto</span>
+            </div>
+          </button>
+          <button
+            className='custom-font arial-font'
+            onClick={() => onFontChange('Arial')}
+          >
+            <div
+              className={`${isFont === 'Arial' && 'active-layout'} border-icon`}
+            >
+              <span className='button-title '>Aa</span>
+              <span className='button-title'>Arial</span>
+            </div>
           </button>
         </div>
       </div>

@@ -15,6 +15,7 @@
 .font-options {
     display: flex;
 
+
     button {
         margin: 0 0.5rem;
         background-color: initial;
@@ -27,15 +28,9 @@
     border: 1px solid var(--color);
     border-radius: 5px;
     padding: 24px;
-
 }
 
-.custom-font {
-    display: flex;
-    border: 1px solid var(--color);
-    border-radius: 5px;
-    padding: 20px 15px;
-}
+
 
 .top-layout {
     background: linear-gradient(180deg, black 50%, #fff 50%);
@@ -71,14 +66,41 @@ input[type="color"] {
 }
 
 .roboto-font {
-    font-family: 'Roboto', sans-serif;
-
+    font-family: 'Roboto' !important;
 }
 
-.font-options {
-    font-family: 'Arial', sans-serif;
+.arial-font {
+    font-family: 'Arial' !important;
+}
+
+.poppins-font {
+    font-family: 'Poppins' !important;
+
 }
 
 .active-layout {
-    border: 2px solid #0e374e;
+    border: 2px solid rgb(221, 71, 71) !important;
+}
+
+.button-title {
+    color: var(--color);
+    padding: 0.5rem;
+}
+
+.custom-font {
+    display: flex;
+    font-size: 14px;
+}
+
+.border-icon {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color);
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
 }

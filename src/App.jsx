@@ -52,6 +52,8 @@ function App() {
 
   const [isTextColor, setIsTextColor] = useState('#ffffff');
 
+  const [isFont, setIsFont] = useState('Poppins');
+
   return (
     <div className={`app ${isDarkMode && 'dark-theme'}`}>
       <div className='cv-form'>
@@ -150,6 +152,8 @@ function App() {
               onBGChangeColor={setIsBGColor}
               isTextColor={isTextColor}
               onTextChangeColor={setIsTextColor}
+              isFont={isFont}
+              onFontChange={setIsFont}
             />
           )}
         </div>
@@ -164,6 +168,7 @@ function App() {
             layout={layout}
             bgcolor={isBGColor}
             textcolor={isTextColor}
+            font={isFont}
           />
         </div>
       </div>
