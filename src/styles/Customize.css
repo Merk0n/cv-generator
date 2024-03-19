@@ -38,11 +38,11 @@
 }
 
 .top-layout {
-    background: linear-gradient(180deg, #0e374e 50%, #fff 50%);
+    background: linear-gradient(180deg, var(--color-primary) 50%, #fff 50%);
 }
 
 .left-layout {
-    background: linear-gradient(90deg, #0e374e 50%, #fff 50%);
+    background: linear-gradient(90deg, var(--color-primary) 50%, #fff 50%);
 }
 
 input[type="color"] {

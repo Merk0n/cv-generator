@@ -1,6 +1,11 @@
 import '../styles/Customize.css';
 
-export default function Customize({ isLayout, onChangeLayout }) {
+export default function Customize({
+  isLayout,
+  onChangeLayout,
+  isColor,
+  onChangeColor,
+}) {
   return (
     <div className='customize'>
       <div className='customize-option'>
@@ -32,7 +37,12 @@ export default function Customize({ isLayout, onChangeLayout }) {
         <h2>Color</h2>
         <div className='color-options'>
           Accent Color:
-          <input className='rounded-input' type='color' value={'#0e374e'} />
+          <input
+            onChange={(e) => onChangeColor(e.target.value)}
+            className='rounded-input'
+            type='color'
+            value={isColor}
+          />
         </div>
       </div>
 

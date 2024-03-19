@@ -42,18 +42,13 @@ function App() {
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
     documentTitle: 'CV',
-    pageStyle: `
-      @page {
-        size: A4;
-        margin: 0;
-      }
-      body {
-        margin: 0;
-      }
-    `,
+    pageStyle:
+      '@media print { body { -webkit-print-color-adjust: exact; } @page { size: A4; margin: 0 } }',
   });
 
   const [layout, setLayout] = useState('top');
+
+  const [isColor, setIsColor] = useState('#0e374e');
 
   return (
     <div className={`app ${isDarkMode && 'dark-theme'}`}>
@@ -147,7 +142,12 @@ function App() {
             </>
           ) : (
             <Card title='Customize'>
-              <Customize isLayout={layout} onChangeLayout={setLayout} />
+              <Customize
+                isLayout={layout}
+                onChangeLayout={setLayout}
+                isColor={isColor}
+                onChangeColor={setIsColor}
+              />
             </Card>
           )}
         </div>
@@ -160,6 +160,7 @@ function App() {
             education={educationInfo}
             techStack={techStackInfo}
             layout={layout}
+            color={isColor}
           />
         </div>
       </div>

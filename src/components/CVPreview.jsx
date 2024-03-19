@@ -5,6 +5,7 @@ export default function CVPreview({
   education,
   layout,
   techStack,
+  color,
 }) {
   const formatDate = (date) => {
     const newDate = new Date(date);
@@ -15,9 +16,13 @@ export default function CVPreview({
     });
   };
 
+  const styles = {
+    backgroundColor: color,
+  };
+
   return (
     <div className={layout}>
-      <div className='personal-preview'>
+      <div style={styles} className='personal-preview'>
         <div className='personal-top'>
           <h1>{personal[0].name}</h1>
           <em>
@@ -70,7 +75,7 @@ export default function CVPreview({
           );
         })}
       </div>
-      <div className='techstack-preview'>
+      <div style={styles} className='techstack-preview'>
         <h2 className='section-title'>Tech Stack</h2>
         {techStack.map((item, index) => {
           return (
