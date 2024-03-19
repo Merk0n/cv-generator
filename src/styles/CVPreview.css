@@ -12,7 +12,6 @@
 .cv-print {
     width: 21cm;
     height: 29.7cm;
-    padding: 1cm;
     background-color: white;
     color: black;
 }
@@ -23,15 +22,19 @@
     margin-bottom: 25px;
 }
 
-.personal-preview h1 {
-    text-align: center;
+
+.personal-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
 }
 
 .personal-info {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    margin-top: 25px;
+    margin: 25px;
     justify-content: center;
 }
 
@@ -39,29 +42,61 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 25px;
+    margin: 10px 25px 25px 25px;
 }
 
 .education-preview {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 25px;
+    margin: 10px 25px 25px 25px;
+}
+
+.techstack-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .top {
     display: flex;
     flex-direction: column;
+
+    .personal-preview {
+        color: white;
+        background-color: #0e374e;
+    }
+
+    .techstack-preview {
+        margin: 25px;
+    }
 }
 
 
 .left {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
 
     .education-preview {
         grid-column: 2/3;
+    }
+
+    .experience-preview {
+        margin-top: 25px;
+    }
+
+    .techstack-preview {
+        grid-row: 2/3;
+        color: white;
+        background-color: #0e374e;
+        padding: 25px;
+    }
+
+    .personal-preview {
+        color: white;
+        background-color: #0e374e;
+        margin-bottom: 0;
     }
 
     .personal-info {
