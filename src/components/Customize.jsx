@@ -1,16 +1,28 @@
 import '../styles/Customize.css';
-export default function Customize() {
+
+export default function Customize({ isLayout, onChangeLayout }) {
   return (
     <div className='customize'>
       <div className='customize-option'>
         <h2>Layout</h2>
         <div className='layout-options'>
-          <button>
-            <div className='custom-setting top-layout'></div>
+          <button
+            className={isLayout === 'top' && 'active-layout'}
+            onClick={() => onChangeLayout('top')}
+          >
+            <div
+              className={`${
+                isLayout === 'top' && 'active-layout'
+              } custom-setting top-layout`}
+            ></div>
             TOP
           </button>
-          <button>
-            <div className='custom-setting left-layout'></div>
+          <button onClick={() => onChangeLayout('left')}>
+            <div
+              className={`${
+                isLayout === 'left' && 'active-layout'
+              } custom-setting left-layout`}
+            ></div>
             LEFT
           </button>
         </div>

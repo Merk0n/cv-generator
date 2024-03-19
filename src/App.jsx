@@ -13,6 +13,7 @@ import exampleData from './components/exampleData.js';
 import Customize from './components/Customize.jsx';
 import { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
+import TechStack from './components/TechStack.jsx';
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState([exampleData.personalInfo]);
@@ -22,6 +23,8 @@ function App() {
   ]);
 
   const [educationInfo, setEducationInfo] = useState([exampleData.education]);
+
+  const [techStackInfo, setTechStackInfo] = useState([exampleData.techStack]);
 
   const [selectedSetting, setSelectedSetting] = useState('content');
 
@@ -49,6 +52,8 @@ function App() {
       }
     `,
   });
+
+  const [layout, setLayout] = useState('top');
 
   return (
     <div className={`app ${isDarkMode && 'dark-theme'}`}>
@@ -100,11 +105,20 @@ function App() {
                   description: '',
                 },
               ]);
+              setTechStackInfo([
+                {
+                  languages: '',
+                  frameworks: '',
+                  databases: '',
+                  tools: '',
+                },
+              ]);
             }}
             onTemplateLoad={() => {
               setPersonalInfo([exampleData.personalInfo]);
               setExperienceInfo([exampleData.experience]);
               setEducationInfo([exampleData.education]);
+              setTechStackInfo([exampleData.techStack]);
             }}
             onSave={handlePrint}
           />
@@ -127,10 +141,13 @@ function App() {
               <Card title='Education'>
                 <Education state={educationInfo} setState={setEducationInfo} />
               </Card>
+              <Card title='Tech stack'>
+                <TechStack state={techStackInfo} setState={setTechStackInfo} />
+              </Card>
             </>
           ) : (
             <Card title='Customize'>
-              <Customize />
+              <Customize isLayout={layout} onChangeLayout={setLayout} />
             </Card>
           )}
         </div>
@@ -141,6 +158,8 @@ function App() {
             personal={personalInfo}
             experience={experienceInfo}
             education={educationInfo}
+            techStack={techStackInfo}
+            layout={layout}
           />
         </div>
       </div>

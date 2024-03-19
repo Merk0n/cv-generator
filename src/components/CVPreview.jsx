@@ -1,5 +1,11 @@
 import '../styles/CVPreview.css';
-export default function CVPreview({ personal, experience, education }) {
+export default function CVPreview({
+  personal,
+  experience,
+  education,
+  layout,
+  techStack,
+}) {
   const formatDate = (date) => {
     const newDate = new Date(date);
     return newDate.toLocaleDateString('us-US', {
@@ -10,7 +16,7 @@ export default function CVPreview({ personal, experience, education }) {
   };
 
   return (
-    <>
+    <div className={layout}>
       <div className='personal-preview'>
         <div className='personal-top'>
           <h1>{personal[0].name}</h1>
@@ -64,6 +70,23 @@ export default function CVPreview({ personal, experience, education }) {
           );
         })}
       </div>
-    </>
+      <div className='techstack-preview'>
+        <h2 className='section-title'>Tech Stack</h2>
+        {techStack.map((item, index) => {
+          return (
+            <div key={index} className='tech-stack'>
+              <h4 className='languages'>Languages</h4>
+              {techStack[index].languages}
+              <h4 className='frameworks'>Frameworks</h4>
+              {techStack[index].frameworks}
+              <h4 className='databases'>Databases</h4>
+              {techStack[index].databases}
+              <h4 className='tools'>Tools</h4>
+              {techStack[index].tools}
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }

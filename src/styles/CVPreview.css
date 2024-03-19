@@ -46,4 +46,26 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 25px;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    .education-preview {
+        grid-column: 2/3;
+    }
+
+    .personal-info {
+        display: flex;
+        flex-direction: column;
+    }
 }

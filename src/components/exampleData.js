@@ -22,6 +22,13 @@ const exampleData = {
     startDate: '2020-09-01',
     endDate: '2024-06-01',
   },
+
+  techStack: {
+    languages: 'JavaScript, Python, Java',
+    frameworks: 'React',
+    databases: 'MongoDB PostgreSQL MySQL',
+    tools: 'Git Docker Jenkins',
+  },
 };
 
 export default exampleData;
