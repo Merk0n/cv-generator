@@ -70,6 +70,7 @@
     .techstack-preview {
         margin: 25px;
         background-color: white !important;
+        color: black !important;
     }
 }
 
@@ -89,7 +90,7 @@
 
     .techstack-preview {
         grid-row: 2/3;
-        color: white;
+        color: white !important;
         background-color: #0e374e;
         padding: 25px;
     }

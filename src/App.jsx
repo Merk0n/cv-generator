@@ -48,7 +48,9 @@ function App() {
 
   const [layout, setLayout] = useState('top');
 
-  const [isColor, setIsColor] = useState('#0e374e');
+  const [isBGColor, setIsBGColor] = useState('#000000');
+
+  const [isTextColor, setIsTextColor] = useState('#ffffff');
 
   return (
     <div className={`app ${isDarkMode && 'dark-theme'}`}>
@@ -141,14 +143,14 @@ function App() {
               </Card>
             </>
           ) : (
-            <Card title='Customize'>
-              <Customize
-                isLayout={layout}
-                onChangeLayout={setLayout}
-                isColor={isColor}
-                onChangeColor={setIsColor}
-              />
-            </Card>
+            <Customize
+              isLayout={layout}
+              onChangeLayout={setLayout}
+              isBGColor={isBGColor}
+              onBGChangeColor={setIsBGColor}
+              isTextColor={isTextColor}
+              onTextChangeColor={setIsTextColor}
+            />
           )}
         </div>
       </div>
@@ -160,7 +162,8 @@ function App() {
             education={educationInfo}
             techStack={techStackInfo}
             layout={layout}
-            color={isColor}
+            bgcolor={isBGColor}
+            textcolor={isTextColor}
           />
         </div>
       </div>

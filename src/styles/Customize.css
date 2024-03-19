@@ -38,11 +38,11 @@
 }
 
 .top-layout {
-    background: linear-gradient(180deg, var(--color-primary) 50%, #fff 50%);
+    background: linear-gradient(180deg, black 50%, #fff 50%);
 }
 
 .left-layout {
-    background: linear-gradient(90deg, var(--color-primary) 50%, #fff 50%);
+    background: linear-gradient(90deg, black 50%, #fff 50%);
 }
 
 input[type="color"] {
@@ -59,6 +59,12 @@ input[type="color"] {
 }
 
 .color-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-options {
     display: flex;
     align-items: center;
     gap: 10px;

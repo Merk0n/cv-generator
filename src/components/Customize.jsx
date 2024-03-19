@@ -3,12 +3,16 @@ import '../styles/Customize.css';
 export default function Customize({
   isLayout,
   onChangeLayout,
-  isColor,
-  onChangeColor,
+  isBGColor,
+  onBGChangeColor,
+  isTextColor,
+  onTextChangeColor,
 }) {
   return (
     <div className='customize'>
       <div className='customize-option'>
+        <h2>Customize</h2>
+        <hr className='dark-hr' />
         <h2>Layout</h2>
         <div className='layout-options'>
           <button
@@ -16,6 +20,9 @@ export default function Customize({
             onClick={() => onChangeLayout('top')}
           >
             <div
+              style={{
+                background: `linear-gradient(180deg, ${isBGColor} 50%, #fff 50%)`,
+              }}
               className={`${
                 isLayout === 'top' && 'active-layout'
               } custom-setting top-layout`}
@@ -24,7 +31,11 @@ export default function Customize({
           </button>
           <button onClick={() => onChangeLayout('left')}>
             <div
-              className={`${
+              style={{
+                background: `linear-gradient(90deg, ${isBGColor} 50%, #fff 50%)`,
+              }}
+              className={`
+              ${
                 isLayout === 'left' && 'active-layout'
               } custom-setting left-layout`}
             ></div>
@@ -36,13 +47,36 @@ export default function Customize({
       <div className='customize-option'>
         <h2>Color</h2>
         <div className='color-options'>
-          Accent Color:
-          <input
-            onChange={(e) => onChangeColor(e.target.value)}
-            className='rounded-input'
-            type='color'
-            value={isColor}
-          />
+          <div className='custom-options'>
+            <span>Accent Color:</span>
+            <input
+              onChange={(e) => onBGChangeColor(e.target.value)}
+              className='rounded-input'
+              type='color'
+              value={isBGColor}
+            />
+          </div>
+          <div className='custom-options'>
+            <span>Text Color:</span>
+            <input
+              onChange={(e) => onTextChangeColor(e.target.value)}
+              className='rounded-input'
+              type='color'
+              value={isTextColor}
+            />
+          </div>
+          <div className='custom-options'>
+            <span>Set default colors</span>
+            <button
+              className='custom-button'
+              onClick={() => {
+                onBGChangeColor('#000000');
+                onTextChangeColor(`#ffffff`);
+              }}
+            >
+              Reset
+            </button>
+          </div>
         </div>
       </div>
 

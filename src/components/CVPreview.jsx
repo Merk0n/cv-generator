@@ -5,7 +5,8 @@ export default function CVPreview({
   education,
   layout,
   techStack,
-  color,
+  bgcolor,
+  textcolor,
 }) {
   const formatDate = (date) => {
     const newDate = new Date(date);
@@ -17,7 +18,8 @@ export default function CVPreview({
   };
 
   const styles = {
-    backgroundColor: color,
+    backgroundColor: bgcolor,
+    color: textcolor,
   };
 
   return (
