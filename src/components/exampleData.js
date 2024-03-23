@@ -1,4 +1,4 @@
-import examplePhoto from '../assets/profile.jpg';
+import examplePhoto from '../assets/empty_avatar.png';
 const exampleData = {
   personalInfo: {
     photo: examplePhoto,
