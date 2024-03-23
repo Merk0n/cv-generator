@@ -6,6 +6,19 @@ export default function Personal({ state, setState }) {
     <>
       <Input
         index={0}
+        property='photo'
+        label='Photo'
+        type='file'
+        state={state}
+        setState={setState}
+        onClickDeletePhoto={() => {
+          setState((prev) => {
+            return [{ ...prev[0], photo: '' }, ...prev.slice(1)];
+          });
+        }}
+      />
+      <Input
+        index={0}
         property='name'
         label='Name'
         type='text'

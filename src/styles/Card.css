@@ -67,3 +67,26 @@
     background-color: inherit;
 
 }
+
+.photo-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photo-delete-button {
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.clickable-label {
+    cursor: pointer;
+    border: 2px solid var(--color-text-opacity30);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

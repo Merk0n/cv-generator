@@ -1,5 +1,7 @@
+import examplePhoto from '../assets/profile.jpg';
 const exampleData = {
   personalInfo: {
+    photo: examplePhoto,
     name: 'John Doe',
     email: 'john@doe.com',
     phoneNumber: '123-456-7890',

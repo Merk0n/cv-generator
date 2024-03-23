@@ -31,12 +31,20 @@ export default function CVPreview({
     <div style={fontStyle} className={layout}>
       <div style={styles} className='personal-preview'>
         <div className='personal-top'>
-          <h1>{personal[0].name}</h1>
-          <em>
-            {'"'}
-            {personal[0].bio}
-            {'"'}
-          </em>
+          <img
+            className={`${
+              personal[0].photo === '' && 'hide-image'
+            } preview-image`}
+            src={personal[0].photo}
+          />
+          <div>
+            <h1>{personal[0].name}</h1>
+            <em>
+              {'"'}
+              {personal[0].bio}
+              {'"'}
+            </em>
+          </div>
         </div>
         <div className='personal-info'>
           <p>{personal[0].email}</p>

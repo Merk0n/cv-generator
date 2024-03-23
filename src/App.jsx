@@ -80,6 +80,7 @@ function App() {
             onClear={() => {
               setPersonalInfo([
                 {
+                  photo: '',
                   name: '',
                   email: '',
                   phoneNumber: '',
