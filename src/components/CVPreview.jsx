@@ -30,26 +30,34 @@ export default function CVPreview({
   return (
     <div style={fontStyle} className={layout}>
       <div style={styles} className='personal-preview'>
-        <div className='personal-top'>
-          <img
-            className={`${
-              personal[0].photo === '' && 'hide-image'
-            } preview-image`}
-            src={personal[0].photo}
-          />
-          <div>
-            <h1>{personal[0].name}</h1>
-            <em>
-              {'"'}
-              {personal[0].bio}
-              {'"'}
-            </em>
-          </div>
+        <img
+          className={`${
+            personal[0].photo === '' && 'hide-image'
+          } preview-image`}
+          src={personal[0].photo}
+        />
+        <div>
+          <h1>{personal[0].name}</h1>
+          <em>
+            {'"'}
+            {personal[0].bio}
+            {'"'}
+          </em>
         </div>
+
         <div className='personal-info'>
-          <p>{personal[0].email}</p>
-          <p>{personal[0].phoneNumber}</p>
-          <p>{personal[0].address}</p>
+          <div>
+            <h4>Address</h4>
+            <p>{personal[0].address}</p>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <p>{personal[0].email}</p>
+          </div>
+          <div>
+            <h4>Phone Number</h4>
+            <p>{personal[0].phoneNumber}</p>
+          </div>
         </div>
       </div>
 
@@ -59,7 +67,7 @@ export default function CVPreview({
           return (
             <div key={index} className='experience'>
               <h3 className='job-title'>
-                {experience[index].companyName}-
+                {experience[index].companyName} -{' '}
                 {experience[index].positionTitle}
               </h3>
               <h4 className='location'>
@@ -67,9 +75,9 @@ export default function CVPreview({
               </h4>
 
               <p className='date'>
-                {formatDate(experience[index].startDate)} -
+                {formatDate(experience[index].startDate)} -{' '}
+                {formatDate(experience[index].endDate)}
               </p>
-              <p className='date'>{formatDate(experience[index].endDate)}</p>
 
               <p className='description'>{experience[index].description}</p>
             </div>
