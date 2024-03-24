@@ -19,17 +19,17 @@ const exampleData = {
   },
 
   education: {
-    school: 'Moon Space Lab',
-    degree: 'BSc Science',
-    startDate: '2020-09-01',
-    endDate: '2024-06-01',
+    school: 'Warsaw University of Technology',
+    degree: 'B.Sc. Computer Science',
+    startDate: '2021-09-01',
+    endDate: '2025-06-01',
   },
 
   techStack: {
-    languages: 'JavaScript, Python, Java',
+    languages: 'JavaScript,',
     frameworks: 'React',
-    databases: 'MongoDB PostgreSQL MySQL',
-    tools: 'Git Docker Jenkins',
+    databases: '-',
+    tools: 'Git',
   },
 };
 

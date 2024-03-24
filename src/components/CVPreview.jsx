@@ -90,10 +90,12 @@ export default function CVPreview({
           return (
             <div key={index} className='experience'>
               <h3 className='job-title'>
-                {education[index].degree}-{education[index].school}
+                {education[index].degree} - {education[index].school}
               </h3>
-              <p className='date'>{formatDate(education[index].startDate)} -</p>
-              <p className='date'>{formatDate(education[index].endDate)}</p>
+              <p className='date'>
+                {formatDate(education[index].startDate)} -{' '}
+                {formatDate(education[index].endDate)}
+              </p>
             </div>
           );
         })}
@@ -104,13 +106,13 @@ export default function CVPreview({
           return (
             <div key={index} className='tech-stack'>
               <h4 className='languages'>Languages</h4>
-              {techStack[index].languages}
+              <div className='tech-info'>{techStack[index].languages}</div>
               <h4 className='frameworks'>Frameworks</h4>
-              {techStack[index].frameworks}
+              <div className='tech-info'>{techStack[index].frameworks}</div>
               <h4 className='databases'>Databases</h4>
-              {techStack[index].databases}
+              <div className='tech-info'>{techStack[index].databases}</div>
               <h4 className='tools'>Tools</h4>
-              {techStack[index].tools}
+              <div className='tech-info'>{techStack[index].tools}</div>
             </div>
           );
         })}
