@@ -3,10 +3,26 @@
     display: flex;
     flex-direction: column;
     background-color: var(--color-background-preview);
-    height: auto;
+    height: 1200px;
     width: 900px;
     align-items: center;
     padding: 1cm 0;
+    overflow-y: auto;
+}
+
+.cv-preview::-webkit-scrollbar {
+    width: 0.25em;
+    background: transparent;
+}
+
+.cv-preview::-webkit-scrollbar-track {
+    margin: 24px 0;
+    background-color: transparent;
+}
+
+.cv-preview::-webkit-scrollbar-thumb {
+    background-color: var(--color-text-opacity30);
+    border-radius: 10px;
 }
 
 .cv-print {
